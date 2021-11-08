@@ -1,5 +1,6 @@
 import 'package:defov_flutter/core/app_config.dart';
 import 'package:defov_flutter/data/local/shared_preferences_manager.dart';
+import 'package:defov_flutter/data/remote/auth/auth_api_service.dart';
 import 'package:dio/dio.dart';
 
 abstract class RestApiFactoryListener {
@@ -77,4 +78,6 @@ class RestApiFactory {
     options.receiveTimeout = timeOut;
     return options;
   }
+
+  AuthApiService provideAuthApi() => AuthApiService(dio: _createDioClient());
 }
