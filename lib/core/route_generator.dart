@@ -15,10 +15,10 @@ class RouteGenerator {
     return CupertinoPageRoute(
       builder: (_) => Scaffold(
         appBar: AppBar(
-          title: const Text('Error'),
+          title: const Text('ERROR'),
         ),
         body: const Center(
-          child: Text('Error'),
+          child: Text('Page not found!'),
         ),
       ),
     );
