@@ -6,7 +6,7 @@ List<SingleChildWidget> dependentProviders = [
   ),
 
   /**
-   * Api Service
+   * Api Services
    */
   ProxyProvider2<HttpHandler, SharedPreferencesManager, AuthApiService>(
     update: (_, httpHandler, prefs, __) =>
