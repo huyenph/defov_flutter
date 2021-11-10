@@ -12,10 +12,8 @@ import 'package:provider/single_child_widget.dart';
 
 part 'independent_provider.dart';
 part 'dependent_provider.dart';
-part 'ui_consumable_provider.dart';
 
 List<SingleChildWidget> providers = [
   ...independentProviders,
   ...dependentProviders,
-  ...uiConsumableProviders,
 ];
