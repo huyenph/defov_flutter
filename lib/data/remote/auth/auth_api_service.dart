@@ -1,3 +1,4 @@
+import 'package:defov_flutter/test/album.dart';
 import 'package:dio/dio.dart';
 
 class AuthApiService {
@@ -7,5 +8,9 @@ class AuthApiService {
 
   Future<Response<String>> getUserToken() async {
     return await dio.get('path');
+  }
+
+  Future<Response<Album>> fetchAlbum() async {
+    return await dio.get('https://jsonplaceholder.typicode.com/albums/1');
   }
 }
