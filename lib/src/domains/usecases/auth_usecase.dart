@@ -1,4 +1,4 @@
-import 'package:defov_flutter/domains/repositories/auth_repository.dart';
+import 'package:defov_flutter/src/domains/repositories/auth_repository.dart';
 
 class AuthUseCase {
   final AuthRepository _authRepository;

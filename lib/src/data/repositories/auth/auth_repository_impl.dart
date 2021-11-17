@@ -1,6 +1,6 @@
-import 'package:defov_flutter/data/local/shared_preferences_manager.dart';
-import 'package:defov_flutter/data/remote/auth/auth_api_service.dart';
-import 'package:defov_flutter/domains/repositories/auth_repository.dart';
+import 'package:defov_flutter/src/data/datasources/local/shared_preferences_manager.dart';
+import 'package:defov_flutter/src/data/datasources/remote/auth/auth_api_service.dart';
+import 'package:defov_flutter/src/domains/repositories/auth_repository.dart';
 import 'package:dio/dio.dart';
 
 class AuthRepositoryImpl extends AuthRepository {

@@ -1,15 +1,11 @@
-import 'package:defov_flutter/core/app_config.dart';
-import 'package:defov_flutter/di/provider_setup.dart';
+import 'package:defov_flutter/src/config/app_config.dart';
+import 'package:defov_flutter/src/injector.dart';
 import 'package:defov_flutter/main.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDependencies();
   AppConfig(flavor: Flavor.prod);
-  runApp(
-    MultiProvider(
-      providers: providers,
-      child: const MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }

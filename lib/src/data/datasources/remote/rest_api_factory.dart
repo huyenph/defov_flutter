@@ -1,6 +1,6 @@
-import 'package:defov_flutter/core/app_config.dart';
-import 'package:defov_flutter/data/local/shared_preferences_manager.dart';
-import 'package:defov_flutter/data/remote/auth/auth_api_service.dart';
+import 'package:defov_flutter/src/config/app_config.dart';
+import 'package:defov_flutter/src/data/datasources/local/shared_preferences_manager.dart';
+import 'package:defov_flutter/src/data/datasources/remote/auth/auth_api_service.dart';
 import 'package:dio/dio.dart';
 
 abstract class RestApiFactoryListener {

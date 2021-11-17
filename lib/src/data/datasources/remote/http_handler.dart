@@ -1,5 +1,5 @@
-import 'package:defov_flutter/data/remote/rest_api_factory.dart';
-import 'package:defov_flutter/data/remote/token_expired_handler.dart';
+import 'package:defov_flutter/src/data/datasources/remote/rest_api_factory.dart';
+import 'package:defov_flutter/src/data/datasources/remote/token_expired_handler.dart';
 import 'package:dio/dio.dart';
 
 class HttpHandler implements RestApiFactoryListener {
