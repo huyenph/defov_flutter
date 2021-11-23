@@ -1,3 +1,4 @@
+import 'package:defov_flutter/src/data/datasources/local/persist/database_helper.dart';
 import 'package:defov_flutter/src/data/datasources/local/shared_preferences_manager.dart';
 import 'package:defov_flutter/src/data/datasources/remote/auth/auth_api_service.dart';
 import 'package:defov_flutter/src/data/datasources/remote/http_handler.dart';
@@ -18,6 +19,7 @@ Future<void> initializeDependencies() async {
   injector.registerSingleton<SharedPreferencesManager>(
     SharedPreferencesManager(),
   );
+  injector.registerSingleton<DatabaseHelper>(DatabaseHelper.instance);
 
   /**
    * Api Services
