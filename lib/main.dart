@@ -1,6 +1,6 @@
 import 'package:defov_flutter/src/config/route_generator.dart';
-import 'package:defov_flutter/src/data/datasources/local/persist/database_helper.dart';
-import 'package:defov_flutter/src/domains/entities/user_model.dart';
+import 'package:defov_flutter/src/data/datasources/local/persistence/database_helper.dart';
+import 'package:defov_flutter/src/domains/entities/user.dart';
 import 'package:defov_flutter/src/injector.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    insert();
   }
 
   @override
@@ -59,8 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void insert() async {
-    final user = UserModel(id: 1, name: 'huyen', description: 'hello');
+    final user = User(id: 1, name: 'huyen', description: 'hello');
     final count = await injector<DatabaseHelper>().queryRowCount();
-    print(count);
   }
 }

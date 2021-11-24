@@ -1,4 +1,4 @@
-import 'package:defov_flutter/src/domains/entities/user_model.dart';
+import 'package:defov_flutter/src/domains/entities/user.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -33,7 +33,7 @@ class DatabaseHelper {
     );
   }
 
-  Future<void> insert(UserModel user) async {
+  Future<void> insert(User user) async {
     Database db = await instance.database;
     await db.insert(
       tableName,
